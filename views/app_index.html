@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            WebGIS作业。新冠疫情可视化。
+        </title>
+        <script type="text/javascript" src="/JQuery/jquery-3.5.1.min.js"></script>
+        <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+        <!-- OL5 script-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+        <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+        <!-- base style -->
+        <link href="/style/style.css" rel="stylesheet" type="text/css">
+        <!-- init -->
+        <script src="/script/init.js"></script>
+
+
+    <body onload="init()">
+        <!-- start tools -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">WebGIS</a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div id="chinaData" value= <%=全国['Confirmed']%>></div>
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">中国疫情现状 <span class="sr-only">(current)</span></a></li>
+                  <li class="active"><a href="#">我国累计确诊:<%=全国['Confirmed']%><span class="sr-only">(current)</span></a></li>
+                  <li class="active"><a href="#">累计死亡:<%=全国['Deaths']%> <span class="sr-only">(current)</span></a></li>
+                  <li class="active"><a href="#">累计治愈:<%=全国['Recovered']%> <span class="sr-only">(current)</span></a></li>
+                  <li class="active"><a href="charts/china">全国疫情发展图表 <span class="sr-only">(current)</span></a></li>
+                  <li></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">使用Node.js的Express框架</a></li>
+                      <li><a href="#">外部接口使用老师给的天地图API</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">从0开始的WebGIS生涯QwQ</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>
+
+        <!-- main body-->
+        <div id="map">
+        <!-- Popup -->
+        <div id="popup" class="ol-popup">
+          <div id="popup-closer" class="ol-popup-closer"></div>
+          <div id = "covid-data">
+            
+          <div>
+          <div id="popup-content">
+            
+          </div>
+        </div>       
+        </div>
+    </body>
+</html>
